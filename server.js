@@ -37,6 +37,7 @@ app.get('/api/stats', async (_req, res) => {
   }
 });
 
+app.get('/', (_req, res) => res.json({ success: true, message: 'Xpand Bharat API is running' }));
 app.get('/api/health', (_req, res) => res.json({ success: true, message: 'Xpand Bharat API is running' }));
 
 app.use((_req, res) => res.status(404).json({ success: false, message: 'Route not found' }));
