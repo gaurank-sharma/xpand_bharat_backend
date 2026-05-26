@@ -1,16 +1,12 @@
 const mongoose = require('mongoose');
-const dns = require('dns');
-
-// Force Google DNS — avoids link-local IPv6 router DNS refusing SRV queries
-dns.setServers(['8.8.8.8', '8.8.4.4', '1.1.1.1']);
 
 const connectDB = async () => {
   try {
-    await mongoose.connect(process.env.MONGODB_URI, { family: 4 });
+    await mongoose.connect(process.env.MONGODB_URI);
     console.log('MongoDB connected — xpand_bharat');
   } catch (err) {
     console.error('MongoDB connection failed:', err.message);
-    process.exit(1);
+    throw err;
   }
 };
 
