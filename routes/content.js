@@ -14,13 +14,19 @@ router.get('/', protect, async (req, res) => {
   } catch (err) { res.status(500).json({ success: false, message: err.message }); }
 });
 
+const TEXT_FIELDS = ['page','section','order','badge','tag','title','subtitle','description','link','extra','isActive','intro','lead','closing','quote','frontDesc','backStat','backDesc'];
+const ARRAY_FIELDS = ['metrics','items','paras'];
+const parseArray = (v) => {
+  if (Array.isArray(v)) return v;
+  try { return JSON.parse(v); } catch { return v ? [v] : []; }
+};
+
 // POST /api/content — admin
 router.post('/', protect, memoryUpload.single('image'), async (req, res) => {
   try {
-    const fields = ['page','section','order','badge','tag','title','subtitle','description','link','extra','isActive'];
     const body = {};
-    fields.forEach(f => { if (req.body[f] !== undefined) body[f] = req.body[f]; });
-    if (req.body.metrics) body.metrics = JSON.parse(req.body.metrics);
+    TEXT_FIELDS.forEach(f => { if (req.body[f] !== undefined) body[f] = req.body[f]; });
+    ARRAY_FIELDS.forEach(f => { if (req.body[f] !== undefined) body[f] = parseArray(req.body[f]); });
     if (req.file) {
       const result = await uploadToCloudinary(req.file.buffer, 'content');
       body.imageUrl = result.secure_url;
@@ -36,9 +42,8 @@ router.put('/:id', protect, memoryUpload.single('image'), async (req, res) => {
   try {
     const item = await ContentItem.findById(req.params.id);
     if (!item) return res.status(404).json({ success: false, message: 'Item not found' });
-    const fields = ['page','section','order','badge','tag','title','subtitle','description','link','extra','isActive'];
-    fields.forEach(f => { if (req.body[f] !== undefined) item[f] = req.body[f]; });
-    if (req.body.metrics) item.metrics = JSON.parse(req.body.metrics);
+    TEXT_FIELDS.forEach(f => { if (req.body[f] !== undefined) item[f] = req.body[f]; });
+    ARRAY_FIELDS.forEach(f => { if (req.body[f] !== undefined) item[f] = parseArray(req.body[f]); });
     if (req.file) {
       if (item.imagePublicId) await cloudinary.uploader.destroy(item.imagePublicId);
       const result = await uploadToCloudinary(req.file.buffer, 'content');

@@ -20,11 +20,12 @@ router.get('/', async (_req, res) => {
 router.put('/', protect, async (req, res) => {
   try {
     const s = await getSettings();
-    const fields = ['companyName','tagline','email','phone','whatsapp','address','footerTagline','footerSubline','copyrightText'];
+    const fields = ['companyName','tagline','email','phone','whatsapp','address','footerDescription','footerHeading','footerTagline','footerSubline','copyrightText'];
     fields.forEach(f => { if (req.body[f] !== undefined) s[f] = req.body[f]; });
     if (req.body.socialLinks) {
       s.socialLinks.linkedin  = req.body.socialLinks.linkedin  ?? s.socialLinks.linkedin;
       s.socialLinks.instagram = req.body.socialLinks.instagram ?? s.socialLinks.instagram;
+      s.socialLinks.facebook  = req.body.socialLinks.facebook  ?? s.socialLinks.facebook;
       s.socialLinks.twitter   = req.body.socialLinks.twitter   ?? s.socialLinks.twitter;
     }
     await s.save();

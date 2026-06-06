@@ -4,6 +4,32 @@ const ContentItem = require('../models/ContentItem');
 const { protect } = require('../middleware/auth');
 const { cloudinary, memoryUpload, uploadToCloudinary } = require('../config/cloudinary');
 
+// GET /api/page — public: returns ALL pages (hero + sections) in a single response.
+// Lets the frontend prefetch the entire site once for instant navigation.
+router.get('/', async (_req, res) => {
+  try {
+    const [heroes, items] = await Promise.all([
+      PageHero.find({}),
+      ContentItem.find({ isActive: true }).sort({ page: 1, section: 1, order: 1 }),
+    ]);
+
+    const pages = {};
+    const ensure = (page) => {
+      if (!pages[page]) pages[page] = { hero: null, sections: {} };
+      return pages[page];
+    };
+
+    heroes.forEach(h => { ensure(h.page).hero = h; });
+    items.forEach(item => {
+      const p = ensure(item.page);
+      if (!p.sections[item.section]) p.sections[item.section] = [];
+      p.sections[item.section].push(item);
+    });
+
+    res.json({ success: true, data: pages });
+  } catch (err) { res.status(500).json({ success: false, message: err.message }); }
+});
+
 // GET /api/page/:page — public: returns hero + all active items grouped by section
 router.get('/:page', async (req, res) => {
   try {

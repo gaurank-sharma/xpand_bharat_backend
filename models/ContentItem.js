@@ -14,6 +14,17 @@ const contentItemSchema = new mongoose.Schema({
   imagePublicId:{ type: String, default: '' },
   link:         { type: String, default: '' },
   extra:        { type: String, default: '' },
+  // Rich content fields (used by multi-part sections like the expansion framework,
+  // why-us bullet blocks, and the industries flip cards)
+  intro:        { type: String, default: '' },
+  lead:         { type: String, default: '' },
+  closing:      { type: String, default: '' },
+  quote:        { type: String, default: '' },
+  items:        [String],
+  paras:        [String],
+  frontDesc:    { type: String, default: '' },
+  backStat:     { type: String, default: '' },
+  backDesc:     { type: String, default: '' },
   isActive:     { type: Boolean, default: true },
 }, { timestamps: true });
 
