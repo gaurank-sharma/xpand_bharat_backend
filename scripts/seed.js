@@ -212,12 +212,86 @@ const CONTENT = [
   { page: 'about', section: 'focus-areas', order: 5, tag: 'WE CLOSE',       title: 'We Support the Deal Till Closure',    paras: ['From investor alignment and coordination to execution support and commercial discussions, XPAND remains involved throughout the expansion journey to help move opportunities toward closure.'] },
 ];
 
+// ─── INSIGHT ARTICLE BODIES (HTML) ───────────────────────────────────────────────
+const C_STRUCTURE = `
+<p>Every founder dreams of the second outlet, the tenth, the hundredth. But the brands that actually get there rarely win on speed. They win on structure.</p>
+<h2>Speed hides the cracks. Structure removes them.</h2>
+<p>When a business opens locations faster than it can systemise them, every new outlet inherits the chaos of the last one — plus its own. Inconsistency compounds. What looked like momentum becomes a liability the moment quality slips in one city and word travels to the next.</p>
+<p>Structured franchising flips this. Before scale, you fix the model: the playbook, the unit economics, the supply chain, the training, the governance. Each new outlet then becomes a <strong>copy of a proven system</strong> — not an experiment.</p>
+<h2>What "structure" actually means</h2>
+<ul>
+  <li><strong>A documented operating model</strong> — so any franchisee can run the business the same way you do.</li>
+  <li><strong>Proven unit economics</strong> — margins that survive at the location level, not just on a spreadsheet.</li>
+  <li><strong>Repeatable systems</strong> — hiring, training, procurement, and quality that don't depend on the founder being in the room.</li>
+  <li><strong>Investor-ready positioning</strong> — a story and a structure that serious capital can underwrite.</li>
+</ul>
+<blockquote>Anyone can help you open another outlet. The harder, more valuable work is building a business that deserves fifty more.</blockquote>
+<h2>Why this matters for investors too</h2>
+<p>Structure is what turns a "good business" into an investable one. Investors aren't buying your enthusiasm — they're buying the probability that the model repeats. The more structured the system, the lower the perceived risk, and the more commercially serious the partners you attract.</p>
+<p>Speed without structure creates noise. Structure is what lets you scale that into a national footprint — calmly, repeatably, and on terms that hold up at scale.</p>
+`;
+
+const C_SIGNALS = `
+<p>Wanting to scale and being ready to scale are two very different things. Before a brand expands, it should pass five readiness tests — each one a signal that growth will be sustainable rather than fragile.</p>
+<h2>1. A proven, profitable model</h2>
+<p>The business should already demonstrate operational consistency, real customer demand, and margins that work at the unit level. If a single location isn't reliably profitable, replication only multiplies the problem.</p>
+<h2>2. Systems that travel</h2>
+<p>Can the experience, the operations, and the commercial performance be replicated in a city the founder has never visited? Expansion-ready brands run on systems, not on the founder's presence.</p>
+<h2>3. Market potential beyond the home turf</h2>
+<p>There must be genuine demand across tier-1, tier-2, and emerging markets — not just in the one neighbourhood where the brand was born.</p>
+<h2>4. Investor viability</h2>
+<ul>
+  <li>Is the opportunity commercially attractive to a serious investor?</li>
+  <li>Are the economics clear and defensible?</li>
+  <li>Is there long-term scalability, not just a short-term spike?</li>
+</ul>
+<h2>5. Execution discipline</h2>
+<p>Rollout strategy, investor-ready proposals, and franchise positioning need to exist <strong>before</strong> the first investor conversation — not improvised after it.</p>
+<blockquote>The focus isn't on "growth-stage" businesses. It's on businesses capable of building structured franchise systems across markets.</blockquote>
+<p>Pass these five tests and expansion becomes a structured movement. Skip them, and growth becomes a gamble dressed up as ambition.</p>
+`;
+
+const C_INVESTORS = `
+<p>Investment into franchise businesses has surged — and so has the failure rate. The investors who consistently back winners aren't chasing hype. They're running a checklist.</p>
+<h2>They buy systems, not energy</h2>
+<p>After decades of building wealth, sharp investors know the difference between a business with energy and a business with systems. Energy fades; systems compound. The first question is always: <strong>does this model repeat without the founder?</strong></p>
+<h2>Alignment over volume</h2>
+<p>A 500-option listing isn't alignment — it's homework. The right opportunity is matched to the investor's goals, sector preference, capital appetite, and growth horizon. Right sector, right model, right market, right fit.</p>
+<h2>Why franchise over stocks, real estate, or mutual funds?</h2>
+<p>Franchise businesses offer something most asset classes can't:</p>
+<ul>
+  <li>An operational system you don't have to build from scratch.</li>
+  <li>A brand customers already trust.</li>
+  <li>A scalable growth model designed for multi-location expansion.</li>
+</ul>
+<p>This isn't passive investing. It's structured business ownership — with operational guidance and long-term commercial scalability when backed by real demand and execution systems.</p>
+<blockquote>Because serious money deserves serious structure.</blockquote>
+<h2>What they check before committing</h2>
+<p>Investment attractiveness, operational sustainability, commercial clarity, franchise scalability, and long-term growth potential. When all five hold, the decision stops being a leap of faith and becomes a calculated allocation.</p>
+`;
+
+const C_TIER2 = `
+<p>India's consumption story is no longer a metro story. The brands still treating tier-2 and tier-3 cities as an afterthought are missing the most significant expansion opportunity of the decade.</p>
+<h2>The demand has already moved</h2>
+<p>Rising incomes, digital access, and aspirational spending have reshaped cities like Jaipur, Lucknow, Chandigarh, Surat, and Nagpur. Consumers there want the same brands, formats, and experiences as the metros — often with less competition and lower operating costs.</p>
+<h2>Why tier-2 rewards structured brands</h2>
+<ul>
+  <li><strong>Lower entry costs</strong> — real estate and operating expenses leave more room in the margin.</li>
+  <li><strong>Loyal, repeat demand</strong> — strong word-of-mouth in tighter communities.</li>
+  <li><strong>First-mover advantage</strong> — being the first credible brand in a category builds durable share.</li>
+</ul>
+<h2>But only if you scale with discipline</h2>
+<p>Tier-2 expansion still demands operational consistency, investor clarity, and disciplined rollout systems. The opportunity is real — but it rewards brands that arrive structured, not brands that arrive fast and improvise.</p>
+<blockquote>Where ambitious brands become scalable businesses — across tier-1, tier-2, and emerging markets alike.</blockquote>
+<p>The next national chains won't be built only in the metros. They'll be built by the brands that mapped tier-2 India early — and entered with structure.</p>
+`;
+
 // ─── INSIGHTS ──────────────────────────────────────────────────────────────────
 const INSIGHTS = [
-  { tag: 'Franchise Growth',       title: 'Why structure matters more than speed in franchise expansion.',                slug: 'why-structure-matters-more-than-speed-in-franchise-expansion',            excerpt: 'Most franchise failures stem not from poor products but from poor systems. The difference between a brand that scales and one that stalls is almost always structural.',             readTime: '6 min read', displayDate: 'May 2025',      img: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80', status: 'published', order: 6 },
-  { tag: 'Business Expansion',     title: 'The five signals that tell you a brand is expansion-ready.',                   slug: 'the-five-signals-that-tell-you-a-brand-is-expansion-ready',               excerpt: 'Not every business that wants to scale is ready to scale. Before expansion, a brand must pass five critical readiness tests that determine whether growth will be sustainable.',   readTime: '5 min read', displayDate: 'April 2025',    img: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80', status: 'published', order: 5 },
-  { tag: 'Investor Perspectives',  title: 'What smart investors look for before entering a franchise opportunity.',        slug: 'what-smart-investors-look-for-before-entering-a-franchise-opportunity',    excerpt: 'Investment in franchise businesses has surged, but so have the failures. Here is what distinguishes the opportunities worth backing from the ones worth walking away from.',       readTime: '7 min read', displayDate: 'April 2025',    img: 'https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=800&q=80', status: 'published', order: 4 },
-  { tag: 'Market Trends',          title: 'Tier-2 India: the next frontier for brand expansion.',                         slug: 'tier-2-india-the-next-frontier-for-brand-expansion',                      excerpt: "The story of India's consumption growth is no longer just a metro story. Brands still ignoring tier-2 and tier-3 cities are missing the most significant opportunity.",          readTime: '8 min read', displayDate: 'March 2025',    img: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80', status: 'published', order: 3 },
+  { tag: 'Franchise Growth',       title: 'Why structure matters more than speed in franchise expansion.',                slug: 'why-structure-matters-more-than-speed-in-franchise-expansion',            excerpt: 'Most franchise failures stem not from poor products but from poor systems. The difference between a brand that scales and one that stalls is almost always structural.',             content: C_STRUCTURE, readTime: '6 min read', displayDate: 'May 2025',      img: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80', status: 'published', order: 6 },
+  { tag: 'Business Expansion',     title: 'The five signals that tell you a brand is expansion-ready.',                   slug: 'the-five-signals-that-tell-you-a-brand-is-expansion-ready',               excerpt: 'Not every business that wants to scale is ready to scale. Before expansion, a brand must pass five critical readiness tests that determine whether growth will be sustainable.',   content: C_SIGNALS, readTime: '5 min read', displayDate: 'April 2025',    img: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80', status: 'published', order: 5 },
+  { tag: 'Investor Perspectives',  title: 'What smart investors look for before entering a franchise opportunity.',        slug: 'what-smart-investors-look-for-before-entering-a-franchise-opportunity',    excerpt: 'Investment in franchise businesses has surged, but so have the failures. Here is what distinguishes the opportunities worth backing from the ones worth walking away from.',       content: C_INVESTORS, readTime: '7 min read', displayDate: 'April 2025',    img: 'https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=800&q=80', status: 'published', order: 4 },
+  { tag: 'Market Trends',          title: 'Tier-2 India: the next frontier for brand expansion.',                         slug: 'tier-2-india-the-next-frontier-for-brand-expansion',                      excerpt: "The story of India's consumption growth is no longer just a metro story. Brands still ignoring tier-2 and tier-3 cities are missing the most significant opportunity.",          content: C_TIER2, readTime: '8 min read', displayDate: 'March 2025',    img: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80', status: 'published', order: 3 },
   { tag: 'Execution & Governance', title: 'Building operational systems that scale without breaking.',                     slug: 'building-operational-systems-that-scale-without-breaking',                 excerpt: 'Operational systems are the backbone of every scalable business. Most businesses hit a ceiling not because of market limits but because of internal system limits.',               readTime: '5 min read', displayDate: 'March 2025',    img: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=800&q=80', status: 'published', order: 2 },
   { tag: 'Business Expansion',     title: 'Commercial clarity: the most underrated competitive advantage.',                slug: 'commercial-clarity-the-most-underrated-competitive-advantage',             excerpt: 'When businesses have genuine commercial clarity — about their model, margins, unit economics, and customer — expansion becomes a structured movement, not a gamble.',              readTime: '6 min read', displayDate: 'February 2025', img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80', status: 'published', order: 1 },
 ];
@@ -253,12 +327,15 @@ async function seed() {
   await ContentItem.insertMany(CONTENT);
   console.log(`✓ Content items: ${CONTENT.length} synced across ${SEEDED_PAGES.length} pages`);
 
-  // Insights — additive (don't clobber admin-authored posts)
-  let insAdded = 0;
+  // Insights — additive (don't clobber admin-authored posts), but backfill
+  // missing article bodies so detail pages always have content.
+  let insAdded = 0, insFilled = 0;
   for (const ins of INSIGHTS) {
-    if (!(await Insight.findOne({ slug: ins.slug }))) { await Insight.create(ins); insAdded++; }
+    const existing = await Insight.findOne({ slug: ins.slug });
+    if (!existing) { await Insight.create(ins); insAdded++; }
+    else if (ins.content && !existing.content) { existing.content = ins.content; await existing.save(); insFilled++; }
   }
-  console.log(`✓ Insights: ${insAdded} added`);
+  console.log(`✓ Insights: ${insAdded} added, ${insFilled} bodies filled`);
 
   console.log('\n✅ Seed complete.');
   process.exit(0);
