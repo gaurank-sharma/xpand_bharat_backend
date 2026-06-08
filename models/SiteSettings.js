@@ -11,7 +11,7 @@ const siteSettingsSchema = new mongoose.Schema({
   logoPublicId:   { type: String, default: '' },
   footerDescription: { type: String, default: "XPAND Bharat is India's leading franchise expansion and investment consulting company, backed by 25+ years of collective industry experience in franchise growth, investor alignment, and business expansion strategy." },
   footerHeading:  { type: String, default: 'Ready to move' },
-  footerTagline:  { type: String, default: 'Less noise. More execution.' },
+  footerTagline:  { type: String, default: "Connect with us. India's Leading Franchise Expansion." },
   footerSubline:  { type: String, default: '' },
   copyrightText:  { type: String, default: 'XPANDBHARAT. All rights reserved.' },
   socialLinks: {

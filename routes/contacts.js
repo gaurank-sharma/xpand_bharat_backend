@@ -17,7 +17,8 @@ const transporter = nodemailer.createTransport({
 });
 
 function buildNotificationEmail(data) {
-  const { name, email, company, mobile, requirement, markets, message, createdAt } = data;
+  const { name, email, company, mobile, requirement, markets, message, createdAt,
+          role, primaryGoal, sector, geography, budget, timeline, consentContact, source } = data;
   const date = new Date(createdAt).toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', dateStyle: 'medium', timeStyle: 'short' });
 
   const row = (label, value) => value ? `
@@ -62,8 +63,15 @@ function buildNotificationEmail(data) {
                 ${row('Email Address', `<a href="mailto:${email}" style="color:#f07920;text-decoration:none;">${email}</a>`)}
                 ${row('Mobile Number', mobile)}
                 ${row('Company / Brand', company)}
+                ${row('I am a', role)}
+                ${row('Looking For', primaryGoal)}
+                ${row('Preferred Sector', sector)}
+                ${row('Preferred Geography', geography || markets)}
+                ${row('Budget', budget)}
+                ${row('Timeline', timeline)}
                 ${row('Requirement', requirement)}
-                ${row('Target Markets', markets)}
+                ${row('OK to Call', consentContact ? 'Yes — advisor may contact' : 'No — report only')}
+                ${row('Source Page', source)}
                 ${row('Submitted At', date)}
               </tbody>
             </table>
@@ -262,18 +270,33 @@ function buildConfirmationEmail(name) {
 
 // POST /api/contacts  — public, rate limited
 router.post('/', limiter, async (req, res) => {
-  const { name, email, company, mobile, requirement, markets, message } = req.body;
+  const { name, email, company, mobile, requirement, markets, message,
+          role, primaryGoal, sector, geography, budget, timeline,
+          consentReport, consentContact, source } = req.body;
   if (!name || !email) return res.status(400).json({ success: false, message: 'Name and email are required' });
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return res.status(400).json({ success: false, message: 'Invalid email address' });
   try {
+    // Build a readable requirement summary from the structured selections
+    const requirementSummary = requirement?.trim()
+      || [role, primaryGoal].filter(Boolean).join(' — ')
+      || undefined;
     const contact = await Contact.create({
       name: name.trim(),
       email: email.trim().toLowerCase(),
       company: company?.trim(),
       mobile: mobile?.trim(),
-      requirement: requirement?.trim(),
-      markets: markets?.trim(),
+      requirement: requirementSummary,
+      markets: (markets || geography)?.trim(),
       message: message?.trim(),
+      role: role?.trim(),
+      primaryGoal: primaryGoal?.trim(),
+      sector: sector?.trim(),
+      geography: geography?.trim(),
+      budget: budget?.trim(),
+      timeline: timeline?.trim(),
+      consentReport: !!consentReport,
+      consentContact: !!consentContact,
+      source: source?.trim(),
       ip: req.ip,
     });
 
