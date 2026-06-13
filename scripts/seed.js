@@ -26,7 +26,7 @@ const HEROES = [
     title: 'Expand with structure.',
     titleHighlight: 'Scale with clarity.',
     subtitle: 'XPAND helps brands grow through strategic expansion planning, market alignment, operational structure, and on-ground execution support.',
-    backgroundImage: '',
+    backgroundImage: 'https://res.cloudinary.com/dx0hznaxr/image/upload/v1781376920/xpand_bharat/site/photo-1441986300917-64674bd600d8.jpg',
     ctaText: 'Start Expanding',
     ctaLink: '/contact',
   },
@@ -36,7 +36,7 @@ const HEROES = [
     title: 'Why Investors Work With',
     titleHighlight: 'XPAND Bharat',
     subtitle: "India's franchise sector is growing fast. Most platforms throw opportunities at investors and hope something sticks. XPAND Bharat does the opposite — we curate, structure, and align franchise businesses with investors who are commercially serious about long-term growth across India.",
-    backgroundImage: '',
+    backgroundImage: 'https://res.cloudinary.com/dx0hznaxr/image/upload/v1781376945/xpand_bharat/site/investor.png',
     ctaText: 'Explore Opportunities',
     ctaLink: '/growth-opportunities',
   },
@@ -46,7 +46,7 @@ const HEROES = [
     title: 'Businesses built',
     titleHighlight: 'to scale.',
     subtitle: "Curated, expansion-ready business opportunities across India's fastest-growing sectors — screened for commercial viability and structural readiness.",
-    backgroundImage: '',
+    backgroundImage: 'https://res.cloudinary.com/dx0hznaxr/image/upload/v1781376922/xpand_bharat/site/photo-1449157291145-7efd050a4d0e.jpg',
     ctaText: '',
     ctaLink: '',
   },
@@ -56,7 +56,7 @@ const HEROES = [
     title: 'Good businesses deserve',
     titleHighlight: 'more than random expansion.',
     subtitle: 'XPAND helps brands become investor-ready, scale through structured franchising, and align with commercially serious investors looking for profitable franchise opportunities in India.',
-    backgroundImage: '',
+    backgroundImage: 'https://res.cloudinary.com/dx0hznaxr/image/upload/v1781376938/xpand_bharat/site/photo-1553877522-43269d4ea984.jpg',
     ctaText: '',
     ctaLink: '',
   },
@@ -66,7 +66,7 @@ const HEROES = [
     title: 'Industries we help scale',
     titleHighlight: 'through expansion.',
     subtitle: 'Whether you are exploring how to expand your brand through franchising or looking for investor-ready franchise opportunities in India, XPAND provides structured franchise business advisory, franchise expansion support, investor alignment, and execution-led growth strategy under one framework.',
-    backgroundImage: '',
+    backgroundImage: 'https://res.cloudinary.com/dx0hznaxr/image/upload/v1781376925/xpand_bharat/site/photo-1480714378408-67cf0d13bc1b.jpg',
     ctaText: '',
     ctaLink: '',
   },
@@ -76,7 +76,7 @@ const HEROES = [
     title: 'Built around one belief.',
     titleHighlight: 'Growth must be structured.',
     subtitle: 'XPAND Bharat is a premium franchise expansion and investment consulting company that connects brands with investors through disciplined systems, commercial clarity, and execution-led movement.',
-    backgroundImage: '',
+    backgroundImage: 'https://res.cloudinary.com/dx0hznaxr/image/upload/v1781376944/xpand_bharat/site/about-us.png',
     ctaText: '',
     ctaLink: '',
   },
@@ -86,7 +86,7 @@ const HEROES = [
     title: 'Perspectives on growth,',
     titleHighlight: 'expansion and execution.',
     subtitle: 'Franchise growth, market trends, investor perspectives, and strategic content for serious business professionals.',
-    backgroundImage: '',
+    backgroundImage: 'https://res.cloudinary.com/dx0hznaxr/image/upload/v1781376936/xpand_bharat/site/photo-1532012197267-da84d127e765.jpg',
     ctaText: '',
     ctaLink: '',
   },
@@ -96,7 +96,7 @@ const HEROES = [
     title: "Let's start the right",
     titleHighlight: 'business conversation.',
     subtitle: 'Whether you are exploring expansion, investment opportunities, or strategic partnerships — XPANDBHARAT is ready to move the conversation forward.',
-    backgroundImage: '',
+    backgroundImage: 'https://res.cloudinary.com/dx0hznaxr/image/upload/v1781376919/xpand_bharat/site/photo-1431576901776-e539bd916ba2.jpg',
     ctaText: '',
     ctaLink: '',
   },
@@ -112,18 +112,18 @@ const CONTENT = [
   { page: 'home', section: 'pillars', order: 5, title: 'Scale',     description: 'Opening more outlets is easy.' },
 
   // ── HOME: photo-cards
-  { page: 'home', section: 'photo-cards', order: 1, tag: 'For Brands',    title: 'Expand with Structure', subtitle: 'Franchise and market expansion',  imageUrl: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=700&q=80', link: '/for-brands' },
-  { page: 'home', section: 'photo-cards', order: 2, tag: 'For Investors', title: 'Invest with Clarity',   subtitle: 'Curated business opportunities',   imageUrl: 'https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=700&q=80', link: '/for-investors' },
-  { page: 'home', section: 'photo-cards', order: 3, tag: 'Opportunities', title: 'Growth at Scale',       subtitle: 'Scalable business models',         imageUrl: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=700&q=80', link: '/growth-opportunities' },
-  { page: 'home', section: 'photo-cards', order: 4, tag: 'Our Approach',  title: 'Structured Execution',  subtitle: 'Five-stage growth framework',      imageUrl: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=700&q=80', link: '/our-approach' },
+  { page: 'home', section: 'photo-cards', order: 1, tag: 'For Brands',    title: 'Expand with Structure', subtitle: 'Franchise and market expansion',  imageUrl: 'https://res.cloudinary.com/dx0hznaxr/image/upload/v1781376920/xpand_bharat/site/photo-1441986300917-64674bd600d8.jpg', link: '/for-brands' },
+  { page: 'home', section: 'photo-cards', order: 2, tag: 'For Investors', title: 'Invest with Clarity',   subtitle: 'Curated business opportunities',   imageUrl: 'https://res.cloudinary.com/dx0hznaxr/image/upload/v1781376941/xpand_bharat/site/photo-1559526324-4b87b5e36e44.jpg', link: '/for-investors' },
+  { page: 'home', section: 'photo-cards', order: 3, tag: 'Opportunities', title: 'Growth at Scale',       subtitle: 'Scalable business models',         imageUrl: 'https://res.cloudinary.com/dx0hznaxr/image/upload/v1781376926/xpand_bharat/site/photo-1486406146926-c627a92ad1ab.jpg', link: '/growth-opportunities' },
+  { page: 'home', section: 'photo-cards', order: 4, tag: 'Our Approach',  title: 'Structured Execution',  subtitle: 'Five-stage growth framework',      imageUrl: 'https://res.cloudinary.com/dx0hznaxr/image/upload/v1781376938/xpand_bharat/site/photo-1553877522-43269d4ea984.jpg', link: '/our-approach' },
 
   // ── FOR-BRANDS: services
-  { page: 'for-brands', section: 'services', order: 1, tag: 'Franchise Ready', title: 'Franchise Expansion', description: 'Structured franchise expansion designed for scalable and sustainable business growth across India.',                          imageUrl: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=300&q=80' },
-  { page: 'for-brands', section: 'services', order: 2, tag: 'Market Mapping',  title: 'Territory Planning',  description: 'Identifying the right cities, markets, and geographies for disciplined, data-backed expansion.',                              imageUrl: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=300&q=80' },
-  { page: 'for-brands', section: 'services', order: 3, tag: 'Multi-Channel',   title: 'Channel Development', description: 'Building organised channel and distribution frameworks for stronger market reach and brand presence.',                       imageUrl: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=300&q=80' },
-  { page: 'for-brands', section: 'services', order: 4, tag: 'Partner Network', title: 'Partner Acquisition', description: 'Connecting brands with commercially aligned franchise and business partners across tier-1 and tier-2 cities.',                imageUrl: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=300&q=80' },
-  { page: 'for-brands', section: 'services', order: 5, tag: 'Growth Planning', title: 'Expansion Strategy',  description: 'Growth-focused expansion plans built around real scalability, unit economics, and operational clarity.',                      imageUrl: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=300&q=80' },
-  { page: 'for-brands', section: 'services', order: 6, tag: 'Full Support',    title: 'Rollout Support',     description: 'End-to-end support for onboarding, coordination, and execution from day one through full rollout.',                          imageUrl: 'https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=300&q=80' },
+  { page: 'for-brands', section: 'services', order: 1, tag: 'Franchise Ready', title: 'Franchise Expansion', description: 'Structured franchise expansion designed for scalable and sustainable business growth across India.',                          imageUrl: 'https://res.cloudinary.com/dx0hznaxr/image/upload/v1781376920/xpand_bharat/site/photo-1441986300917-64674bd600d8.jpg' },
+  { page: 'for-brands', section: 'services', order: 2, tag: 'Market Mapping',  title: 'Territory Planning',  description: 'Identifying the right cities, markets, and geographies for disciplined, data-backed expansion.',                              imageUrl: 'https://res.cloudinary.com/dx0hznaxr/image/upload/v1781376926/xpand_bharat/site/photo-1486406146926-c627a92ad1ab.jpg' },
+  { page: 'for-brands', section: 'services', order: 3, tag: 'Multi-Channel',   title: 'Channel Development', description: 'Building organised channel and distribution frameworks for stronger market reach and brand presence.',                       imageUrl: 'https://res.cloudinary.com/dx0hznaxr/image/upload/v1781376937/xpand_bharat/site/photo-1542744173-8e7e53415bb0.jpg' },
+  { page: 'for-brands', section: 'services', order: 4, tag: 'Partner Network', title: 'Partner Acquisition', description: 'Connecting brands with commercially aligned franchise and business partners across tier-1 and tier-2 cities.',                imageUrl: 'https://res.cloudinary.com/dx0hznaxr/image/upload/v1781376933/xpand_bharat/site/photo-1521791136064-7986c2920216.jpg' },
+  { page: 'for-brands', section: 'services', order: 5, tag: 'Growth Planning', title: 'Expansion Strategy',  description: 'Growth-focused expansion plans built around real scalability, unit economics, and operational clarity.',                      imageUrl: 'https://res.cloudinary.com/dx0hznaxr/image/upload/v1781376938/xpand_bharat/site/photo-1553877522-43269d4ea984.jpg' },
+  { page: 'for-brands', section: 'services', order: 6, tag: 'Full Support',    title: 'Rollout Support',     description: 'End-to-end support for onboarding, coordination, and execution from day one through full rollout.',                          imageUrl: 'https://res.cloudinary.com/dx0hznaxr/image/upload/v1781376940/xpand_bharat/site/photo-1556761175-b413da4baf72.jpg' },
 
   // ── FOR-BRANDS: why-us
   { page: 'for-brands', section: 'why-us', order: 1, badge: '01', title: 'We Do Not Just Generate Franchise Leads. We Help Close Expansion Opportunities.', description: 'Most franchise consulting firms stop at introductions. XPAND helps businesses move from investor interest to commercially aligned expansion through investor counseling, follow-ups, franchise alignment, and execution support.' },
@@ -133,12 +133,12 @@ const CONTENT = [
   { page: 'for-brands', section: 'why-us', order: 5, badge: '05', title: 'We Understand Investor Psychology, Not Just Franchise Consulting.', intro: 'A 40+ business owner investing ₹50 lakh to ₹2 crore is not casually "exploring opportunities." They are comparing:', items: ['franchise investments', 'real estate', 'mutual funds', 'independent businesses', 'expansion risk', 'long-term scalability.'], closing: "XPAND's investor counseling and telesales-driven approach helps businesses communicate stronger commercial clarity to serious investors looking for structured franchise investment opportunities in India." },
 
   // ── FOR-INVESTORS: offerings
-  { page: 'for-investors', section: 'offerings', order: 1, tag: 'Curated Access',  title: 'Business opportunities built for serious investors.',  description: 'Handpicked, commercially verified opportunities across scalable sectors and expansion-ready business models.',                                  imageUrl: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=700&q=80' },
-  { page: 'for-investors', section: 'offerings', order: 2, tag: 'Market Clarity',  title: 'Understand the model before you commit.',              description: 'We give you a clear picture of unit economics, market direction, and expansion potential — before any decision is made.',                     imageUrl: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=700&q=80' },
-  { page: 'for-investors', section: 'offerings', order: 3, tag: 'Strategic Match', title: 'The right opportunity matched to the right investor.', description: 'We align business opportunities with investors who share the same commercial direction and long-term growth mindset.',                        imageUrl: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=700&q=80' },
-  { page: 'for-investors', section: 'offerings', order: 4, tag: 'Proven Models',   title: 'Expansion-ready businesses with real fundamentals.',   description: 'Every business we present is screened for scalability, operational structure, and genuine growth readiness.',                                imageUrl: 'https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=700&q=80' },
-  { page: 'for-investors', section: 'offerings', order: 5, tag: 'Growth Sectors',  title: 'Sectors chosen for their expansion trajectory.',       description: "F&B, retail, services, EdTech, health — opportunities in India's fastest-growing industries with proven demand.",                          imageUrl: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=700&q=80' },
-  { page: 'for-investors', section: 'offerings', order: 6, tag: 'Full Support',    title: 'We stay involved until the investment moves forward.', description: 'From initial conversation to final commitment, our team ensures every investor-brand engagement is handled with structure and accountability.', imageUrl: 'https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=700&q=80' },
+  { page: 'for-investors', section: 'offerings', order: 1, tag: 'Curated Access',  title: 'Business opportunities built for serious investors.',  description: 'Handpicked, commercially verified opportunities across scalable sectors and expansion-ready business models.',                                  imageUrl: 'https://res.cloudinary.com/dx0hznaxr/image/upload/v1781376926/xpand_bharat/site/photo-1486406146926-c627a92ad1ab.jpg' },
+  { page: 'for-investors', section: 'offerings', order: 2, tag: 'Market Clarity',  title: 'Understand the model before you commit.',              description: 'We give you a clear picture of unit economics, market direction, and expansion potential — before any decision is made.',                     imageUrl: 'https://res.cloudinary.com/dx0hznaxr/image/upload/v1781376923/xpand_bharat/site/photo-1460925895917-afdab827c52f.jpg' },
+  { page: 'for-investors', section: 'offerings', order: 3, tag: 'Strategic Match', title: 'The right opportunity matched to the right investor.', description: 'We align business opportunities with investors who share the same commercial direction and long-term growth mindset.',                        imageUrl: 'https://res.cloudinary.com/dx0hznaxr/image/upload/v1781376938/xpand_bharat/site/photo-1553877522-43269d4ea984.jpg' },
+  { page: 'for-investors', section: 'offerings', order: 4, tag: 'Proven Models',   title: 'Expansion-ready businesses with real fundamentals.',   description: 'Every business we present is screened for scalability, operational structure, and genuine growth readiness.',                                imageUrl: 'https://res.cloudinary.com/dx0hznaxr/image/upload/v1781376941/xpand_bharat/site/photo-1559526324-4b87b5e36e44.jpg' },
+  { page: 'for-investors', section: 'offerings', order: 5, tag: 'Growth Sectors',  title: 'Sectors chosen for their expansion trajectory.',       description: "F&B, retail, services, EdTech, health — opportunities in India's fastest-growing industries with proven demand.",                          imageUrl: 'https://res.cloudinary.com/dx0hznaxr/image/upload/v1781376920/xpand_bharat/site/photo-1441986300917-64674bd600d8.jpg' },
+  { page: 'for-investors', section: 'offerings', order: 6, tag: 'Full Support',    title: 'We stay involved until the investment moves forward.', description: 'From initial conversation to final commitment, our team ensures every investor-brand engagement is handled with structure and accountability.', imageUrl: 'https://res.cloudinary.com/dx0hznaxr/image/upload/v1781376940/xpand_bharat/site/photo-1556761175-b413da4baf72.jpg' },
 
   // ── FOR-INVESTORS: stats
   { page: 'for-investors', section: 'stats', order: 1, title: 'India',    description: 'Franchise economy being built right now. Are you positioned inside it?' },
@@ -154,12 +154,12 @@ const CONTENT = [
   { page: 'for-investors', section: 'why-us', order: 5, badge: '05', title: 'Built For Investors Who Think In Decades, Not Quarters', subtitle: "Food. Retail. Lifestyle. Electronics. Emerging Categories. Whether you're looking at food franchise expansion in Tier-1 cities, retail franchise opportunities across India, or emerging consumer category businesses built for the next decade; XPAND focuses on one thing: helping serious investors participate in commercially scalable franchise businesses backed by structure, planning, and execution-led growth." },
 
   // ── GROWTH-OPPORTUNITIES: categories
-  { page: 'growth-opportunities', section: 'categories', order: 1, tag: 'Food and Beverage',    title: 'F&B Expansion',            description: 'From QSR chains to cloud kitchens — high-velocity expansion opportunities with proven models and strong unit economics.', imageUrl: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=80' },
-  { page: 'growth-opportunities', section: 'categories', order: 2, tag: 'Retail and Lifestyle', title: 'Retail Formats',           description: 'Brand-driven retail scaling across tier-1 and tier-2 cities with hybrid models and strong brand loyalty.',                imageUrl: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80' },
-  { page: 'growth-opportunities', section: 'categories', order: 3, tag: 'Service Businesses',    title: 'Service Sector',           description: 'Recurring revenue, low capex, and strong scalability across defensible service business categories.',                     imageUrl: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80' },
-  { page: 'growth-opportunities', section: 'categories', order: 4, tag: 'Emerging Brands',       title: 'Growth Stage',             description: 'Growth-ready businesses with proven models seeking strategic alignment, capital, and expansion support.',                  imageUrl: 'https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=800&q=80' },
-  { page: 'growth-opportunities', section: 'categories', order: 5, tag: 'Franchise',             title: 'Franchise Models',         description: 'Structured franchise systems with defined operations, proven replication, and disciplined rollout support.',              imageUrl: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=800&q=80' },
-  { page: 'growth-opportunities', section: 'categories', order: 6, tag: 'Multi-Market',          title: 'Expansion-Led Businesses', description: 'Businesses positioned for pan-India multi-market growth with long-term operational scalability.',                        imageUrl: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80' },
+  { page: 'growth-opportunities', section: 'categories', order: 1, tag: 'Food and Beverage',    title: 'F&B Expansion',            description: 'From QSR chains to cloud kitchens — high-velocity expansion opportunities with proven models and strong unit economics.', imageUrl: 'https://res.cloudinary.com/dx0hznaxr/image/upload/v1781376918/xpand_bharat/site/photo-1414235077428-338989a2e8c0.jpg' },
+  { page: 'growth-opportunities', section: 'categories', order: 2, tag: 'Retail and Lifestyle', title: 'Retail Formats',           description: 'Brand-driven retail scaling across tier-1 and tier-2 cities with hybrid models and strong brand loyalty.',                imageUrl: 'https://res.cloudinary.com/dx0hznaxr/image/upload/v1781376920/xpand_bharat/site/photo-1441986300917-64674bd600d8.jpg' },
+  { page: 'growth-opportunities', section: 'categories', order: 3, tag: 'Service Businesses',    title: 'Service Sector',           description: 'Recurring revenue, low capex, and strong scalability across defensible service business categories.',                     imageUrl: 'https://res.cloudinary.com/dx0hznaxr/image/upload/v1781376937/xpand_bharat/site/photo-1542744173-8e7e53415bb0.jpg' },
+  { page: 'growth-opportunities', section: 'categories', order: 4, tag: 'Emerging Brands',       title: 'Growth Stage',             description: 'Growth-ready businesses with proven models seeking strategic alignment, capital, and expansion support.',                  imageUrl: 'https://res.cloudinary.com/dx0hznaxr/image/upload/v1781376941/xpand_bharat/site/photo-1559526324-4b87b5e36e44.jpg' },
+  { page: 'growth-opportunities', section: 'categories', order: 5, tag: 'Franchise',             title: 'Franchise Models',         description: 'Structured franchise systems with defined operations, proven replication, and disciplined rollout support.',              imageUrl: 'https://res.cloudinary.com/dx0hznaxr/image/upload/v1781376938/xpand_bharat/site/photo-1553877522-43269d4ea984.jpg' },
+  { page: 'growth-opportunities', section: 'categories', order: 6, tag: 'Multi-Market',          title: 'Expansion-Led Businesses', description: 'Businesses positioned for pan-India multi-market growth with long-term operational scalability.',                        imageUrl: 'https://res.cloudinary.com/dx0hznaxr/image/upload/v1781376926/xpand_bharat/site/photo-1486406146926-c627a92ad1ab.jpg' },
 
   // ── GROWTH-OPPORTUNITIES: differentiators
   { page: 'growth-opportunities', section: 'differentiators', order: 1, badge: '01', title: 'Commercially aligned models',  description: 'Every opportunity is positioned around real commercial logic — not just market potential.' },
@@ -205,11 +205,11 @@ const CONTENT = [
   { page: 'industries', section: 'why-us', order: 5, badge: '05', title: 'We Understand Investor Psychology, Not Just Franchise Consulting.', intro: 'A 40+ business owner investing ₹50 lakh to ₹2 crore is not casually "exploring opportunities." They are comparing:', items: ['franchise investments', 'real estate', 'mutual funds', 'independent businesses', 'expansion risk', 'long-term scalability.'], closing: "XPAND's investor counseling and telesales-driven approach helps businesses communicate stronger commercial clarity to serious investors looking for structured franchise investment opportunities in India." },
 
   // ── ABOUT: focus-areas (Five areas — cinematic image cards)
-  { page: 'about', section: 'focus-areas', order: 1, tag: 'Expansion',  title: 'Business Expansion',  description: 'Helping brands grow through structured, scalable, and execution-led expansion systems across India.', imageUrl: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=700&q=80' },
-  { page: 'about', section: 'focus-areas', order: 2, tag: 'Investors',  title: 'Investor Alignment',  description: 'Connecting investors with commercially verified, growth-ready opportunities backed by real due diligence.', imageUrl: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=700&q=80' },
-  { page: 'about', section: 'focus-areas', order: 3, tag: 'Clarity',    title: 'Commercial Clarity',  description: 'Creating clear commercial frameworks so every business decision is backed by structured, data-driven thinking.', imageUrl: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=700&q=80' },
-  { page: 'about', section: 'focus-areas', order: 4, tag: 'Execution',  title: 'Execution Support',   description: 'Operational discipline and on-ground coordination to ensure strategy becomes tangible progress.', imageUrl: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=700&q=80' },
-  { page: 'about', section: 'focus-areas', order: 5, tag: 'Growth',     title: 'Scalable Growth',     description: 'Building systems, processes, and governance structures that sustain momentum at every stage of growth.', imageUrl: 'https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?auto=format&fit=crop&w=700&q=80' },
+  { page: 'about', section: 'focus-areas', order: 1, tag: 'Expansion',  title: 'Business Expansion',  description: 'Helping brands grow through structured, scalable, and execution-led expansion systems across India.', imageUrl: 'https://res.cloudinary.com/dx0hznaxr/image/upload/v1781376920/xpand_bharat/site/photo-1441986300917-64674bd600d8.jpg' },
+  { page: 'about', section: 'focus-areas', order: 2, tag: 'Investors',  title: 'Investor Alignment',  description: 'Connecting investors with commercially verified, growth-ready opportunities backed by real due diligence.', imageUrl: 'https://res.cloudinary.com/dx0hznaxr/image/upload/v1781376926/xpand_bharat/site/photo-1486406146926-c627a92ad1ab.jpg' },
+  { page: 'about', section: 'focus-areas', order: 3, tag: 'Clarity',    title: 'Commercial Clarity',  description: 'Creating clear commercial frameworks so every business decision is backed by structured, data-driven thinking.', imageUrl: 'https://res.cloudinary.com/dx0hznaxr/image/upload/v1781376923/xpand_bharat/site/photo-1460925895917-afdab827c52f.jpg' },
+  { page: 'about', section: 'focus-areas', order: 4, tag: 'Execution',  title: 'Execution Support',   description: 'Operational discipline and on-ground coordination to ensure strategy becomes tangible progress.', imageUrl: 'https://res.cloudinary.com/dx0hznaxr/image/upload/v1781376938/xpand_bharat/site/photo-1553877522-43269d4ea984.jpg' },
+  { page: 'about', section: 'focus-areas', order: 5, tag: 'Growth',     title: 'Scalable Growth',     description: 'Building systems, processes, and governance structures that sustain momentum at every stage of growth.', imageUrl: 'https://res.cloudinary.com/dx0hznaxr/image/upload/v1781376922/xpand_bharat/site/photo-1449157291145-7efd050a4d0e.jpg' },
 ];
 
 // ─── INSIGHT ARTICLE BODIES (HTML) ───────────────────────────────────────────────
@@ -288,12 +288,12 @@ const C_TIER2 = `
 
 // ─── INSIGHTS ──────────────────────────────────────────────────────────────────
 const INSIGHTS = [
-  { tag: 'Franchise Growth',       title: 'Why structure matters more than speed in franchise expansion.',                slug: 'why-structure-matters-more-than-speed-in-franchise-expansion',            excerpt: 'Most franchise failures stem not from poor products but from poor systems. The difference between a brand that scales and one that stalls is almost always structural.',             content: C_STRUCTURE, readTime: '6 min read', displayDate: 'May 2025',      img: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80', status: 'published', order: 6 },
-  { tag: 'Business Expansion',     title: 'The five signals that tell you a brand is expansion-ready.',                   slug: 'the-five-signals-that-tell-you-a-brand-is-expansion-ready',               excerpt: 'Not every business that wants to scale is ready to scale. Before expansion, a brand must pass five critical readiness tests that determine whether growth will be sustainable.',   content: C_SIGNALS, readTime: '5 min read', displayDate: 'April 2025',    img: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80', status: 'published', order: 5 },
-  { tag: 'Investor Perspectives',  title: 'What smart investors look for before entering a franchise opportunity.',        slug: 'what-smart-investors-look-for-before-entering-a-franchise-opportunity',    excerpt: 'Investment in franchise businesses has surged, but so have the failures. Here is what distinguishes the opportunities worth backing from the ones worth walking away from.',       content: C_INVESTORS, readTime: '7 min read', displayDate: 'April 2025',    img: 'https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=800&q=80', status: 'published', order: 4 },
-  { tag: 'Market Trends',          title: 'Tier-2 India: the next frontier for brand expansion.',                         slug: 'tier-2-india-the-next-frontier-for-brand-expansion',                      excerpt: "The story of India's consumption growth is no longer just a metro story. Brands still ignoring tier-2 and tier-3 cities are missing the most significant opportunity.",          content: C_TIER2, readTime: '8 min read', displayDate: 'March 2025',    img: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80', status: 'published', order: 3 },
-  { tag: 'Execution & Governance', title: 'Building operational systems that scale without breaking.',                     slug: 'building-operational-systems-that-scale-without-breaking',                 excerpt: 'Operational systems are the backbone of every scalable business. Most businesses hit a ceiling not because of market limits but because of internal system limits.',               readTime: '5 min read', displayDate: 'March 2025',    img: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=800&q=80', status: 'published', order: 2 },
-  { tag: 'Business Expansion',     title: 'Commercial clarity: the most underrated competitive advantage.',                slug: 'commercial-clarity-the-most-underrated-competitive-advantage',             excerpt: 'When businesses have genuine commercial clarity — about their model, margins, unit economics, and customer — expansion becomes a structured movement, not a gamble.',              readTime: '6 min read', displayDate: 'February 2025', img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80', status: 'published', order: 1 },
+  { tag: 'Franchise Growth',       title: 'Why structure matters more than speed in franchise expansion.',                slug: 'why-structure-matters-more-than-speed-in-franchise-expansion',            excerpt: 'Most franchise failures stem not from poor products but from poor systems. The difference between a brand that scales and one that stalls is almost always structural.',             content: C_STRUCTURE, readTime: '6 min read', displayDate: 'May 2025',      img: 'https://res.cloudinary.com/dx0hznaxr/image/upload/v1781376920/xpand_bharat/site/photo-1441986300917-64674bd600d8.jpg', status: 'published', order: 6 },
+  { tag: 'Business Expansion',     title: 'The five signals that tell you a brand is expansion-ready.',                   slug: 'the-five-signals-that-tell-you-a-brand-is-expansion-ready',               excerpt: 'Not every business that wants to scale is ready to scale. Before expansion, a brand must pass five critical readiness tests that determine whether growth will be sustainable.',   content: C_SIGNALS, readTime: '5 min read', displayDate: 'April 2025',    img: 'https://res.cloudinary.com/dx0hznaxr/image/upload/v1781376926/xpand_bharat/site/photo-1486406146926-c627a92ad1ab.jpg', status: 'published', order: 5 },
+  { tag: 'Investor Perspectives',  title: 'What smart investors look for before entering a franchise opportunity.',        slug: 'what-smart-investors-look-for-before-entering-a-franchise-opportunity',    excerpt: 'Investment in franchise businesses has surged, but so have the failures. Here is what distinguishes the opportunities worth backing from the ones worth walking away from.',       content: C_INVESTORS, readTime: '7 min read', displayDate: 'April 2025',    img: 'https://res.cloudinary.com/dx0hznaxr/image/upload/v1781376941/xpand_bharat/site/photo-1559526324-4b87b5e36e44.jpg', status: 'published', order: 4 },
+  { tag: 'Market Trends',          title: 'Tier-2 India: the next frontier for brand expansion.',                         slug: 'tier-2-india-the-next-frontier-for-brand-expansion',                      excerpt: "The story of India's consumption growth is no longer just a metro story. Brands still ignoring tier-2 and tier-3 cities are missing the most significant opportunity.",          content: C_TIER2, readTime: '8 min read', displayDate: 'March 2025',    img: 'https://res.cloudinary.com/dx0hznaxr/image/upload/v1781376943/xpand_bharat/site/photo-1600880292203-757bb62b4baf.jpg', status: 'published', order: 3 },
+  { tag: 'Execution & Governance', title: 'Building operational systems that scale without breaking.',                     slug: 'building-operational-systems-that-scale-without-breaking',                 excerpt: 'Operational systems are the backbone of every scalable business. Most businesses hit a ceiling not because of market limits but because of internal system limits.',               readTime: '5 min read', displayDate: 'March 2025',    img: 'https://res.cloudinary.com/dx0hznaxr/image/upload/v1781376938/xpand_bharat/site/photo-1553877522-43269d4ea984.jpg', status: 'published', order: 2 },
+  { tag: 'Business Expansion',     title: 'Commercial clarity: the most underrated competitive advantage.',                slug: 'commercial-clarity-the-most-underrated-competitive-advantage',             excerpt: 'When businesses have genuine commercial clarity — about their model, margins, unit economics, and customer — expansion becomes a structured movement, not a gamble.',              readTime: '6 min read', displayDate: 'February 2025', img: 'https://res.cloudinary.com/dx0hznaxr/image/upload/v1781376923/xpand_bharat/site/photo-1460925895917-afdab827c52f.jpg', status: 'published', order: 1 },
 ];
 
 // Pages whose content is fully managed by this seed. On reseed we replace these
