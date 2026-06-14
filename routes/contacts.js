@@ -6,14 +6,18 @@ const { protect } = require('../middleware/auth');
 
 const limiter = rateLimit({ windowMs: 15 * 60 * 1000, max: 5, message: { success: false, message: 'Too many submissions. Please try again after 15 minutes.' } });
 
+const SMTP_PORT = parseInt(process.env.SMTP_PORT || '587');
 const transporter = nodemailer.createTransport({
   host: process.env.SMTP_HOST || 'smtp.gmail.com',
-  port: parseInt(process.env.SMTP_PORT || '587'),
-  secure: false,
+  port: SMTP_PORT,
+  secure: SMTP_PORT === 465, // SSL on 465, STARTTLS otherwise
   auth: {
     user: process.env.SMTP_USER,
     pass: process.env.SMTP_PASS,
   },
+  connectionTimeout: 10000,
+  greetingTimeout: 8000,
+  socketTimeout: 12000,
 });
 
 function buildNotificationEmail(data) {
@@ -300,27 +304,26 @@ router.post('/', limiter, async (req, res) => {
       ip: req.ip,
     });
 
-    // Send emails (non-blocking — don't let mail failure block the response)
+    // Send emails — AWAIT before responding. On serverless (Vercel) the function is frozen
+    // right after res.json(), so fire-and-forget work (setImmediate) gets dropped and the mail
+    // never sends. Failures are logged but never fail the submission.
     const notifyTo = process.env.NOTIFY_EMAIL || 'contact@xpandbharat.com';
-    setImmediate(async () => {
-      try {
-        await transporter.sendMail({
-          from: `"XPAND Bharat Website" <${process.env.SMTP_USER}>`,
-          to: notifyTo,
-          replyTo: contact.email,
-          subject: `New Inquiry from ${contact.name}${contact.company ? ` — ${contact.company}` : ''}`,
-          html: buildNotificationEmail(contact),
-        });
-        await transporter.sendMail({
-          from: `"XPAND Bharat" <${process.env.SMTP_USER}>`,
-          to: contact.email,
-          subject: 'We have received your inquiry — XPAND Bharat',
-          html: buildConfirmationEmail(contact.name),
-        });
-      } catch (mailErr) {
-        console.error('Email send error:', mailErr.message);
-      }
-    });
+    const mailResults = await Promise.allSettled([
+      transporter.sendMail({
+        from: `"XPAND Bharat Website" <${process.env.SMTP_USER}>`,
+        to: notifyTo,
+        replyTo: contact.email,
+        subject: `New Inquiry from ${contact.name}${contact.company ? ` — ${contact.company}` : ''}`,
+        html: buildNotificationEmail(contact),
+      }),
+      transporter.sendMail({
+        from: `"XPAND Bharat" <${process.env.SMTP_USER}>`,
+        to: contact.email,
+        subject: 'We have received your inquiry — XPAND Bharat',
+        html: buildConfirmationEmail(contact.name),
+      }),
+    ]);
+    mailResults.forEach((r) => { if (r.status === 'rejected') console.error('Email send error:', r.reason?.message); });
 
     res.status(201).json({ success: true, message: 'Message received. We will contact you within 48 hours.', id: contact._id });
   } catch (err) {
