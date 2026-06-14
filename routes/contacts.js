@@ -337,10 +337,12 @@ const LEAD_SOURCES = ['strategy-call', 'brochure-download'];
 
 router.get('/', protect, async (req, res) => {
   const { status, search, view, page = 1, limit = 20 } = req.query;
-  const filter = {};
+  // Scope everything (including status counts) to the active view
+  const viewMatch = view === 'business' ? { source: { $in: LEAD_SOURCES } }
+    : view === 'contact' ? { source: { $nin: LEAD_SOURCES } }
+    : {};
+  const filter = { ...viewMatch };
   if (status && status !== 'all') filter.status = status;
-  if (view === 'business') filter.source = { $in: LEAD_SOURCES };
-  else if (view === 'contact') filter.source = { $nin: LEAD_SOURCES };
   if (search) {
     const r = new RegExp(search, 'i');
     filter.$or = [{ name: r }, { email: r }, { company: r }];
@@ -349,7 +351,7 @@ router.get('/', protect, async (req, res) => {
     const [data, total, stats, businessCount, contactCount] = await Promise.all([
       Contact.find(filter).sort({ createdAt: -1 }).skip((page - 1) * +limit).limit(+limit),
       Contact.countDocuments(filter),
-      Contact.aggregate([{ $group: { _id: '$status', count: { $sum: 1 } } }]),
+      Contact.aggregate([{ $match: viewMatch }, { $group: { _id: '$status', count: { $sum: 1 } } }]),
       Contact.countDocuments({ source: { $in: LEAD_SOURCES } }),
       Contact.countDocuments({ source: { $nin: LEAD_SOURCES } }),
     ]);

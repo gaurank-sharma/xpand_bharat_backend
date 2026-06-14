@@ -304,11 +304,17 @@ async function seed() {
   await mongoose.connect(process.env.MONGODB_URI, { family: 4 });
   console.log('Connected to MongoDB\n');
 
-  // Admin
-  if (!(await Admin.findOne({ email: process.env.ADMIN_EMAIL }))) {
-    await Admin.create({ email: process.env.ADMIN_EMAIL, password: process.env.ADMIN_PASSWORD, name: 'Xpand Bharat Admin' });
-    console.log(`✓ Admin: ${process.env.ADMIN_EMAIL} / ${process.env.ADMIN_PASSWORD}`);
-  } else { console.log('✓ Admin already exists'); }
+  // Admin — ensure the primary account exists and is a superadmin (full access)
+  const existingAdmin = await Admin.findOne({ email: process.env.ADMIN_EMAIL });
+  if (!existingAdmin) {
+    await Admin.create({ email: process.env.ADMIN_EMAIL, password: process.env.ADMIN_PASSWORD, name: 'Xpand Bharat Admin', role: 'superadmin', permissions: Admin.SECTIONS });
+    console.log(`✓ Admin (superadmin): ${process.env.ADMIN_EMAIL} / ${process.env.ADMIN_PASSWORD}`);
+  } else if (existingAdmin.role !== 'superadmin') {
+    existingAdmin.role = 'superadmin';
+    existingAdmin.permissions = Admin.SECTIONS;
+    await existingAdmin.save();
+    console.log('✓ Admin promoted to superadmin');
+  } else { console.log('✓ Admin already a superadmin'); }
 
   // Site Settings
   if (!(await SiteSettings.findOne())) {

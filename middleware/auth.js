@@ -16,4 +16,12 @@ const protect = async (req, res, next) => {
   }
 };
 
-module.exports = { protect };
+// Only superadmins may manage members
+const requireSuperadmin = (req, res, next) => {
+  if (req.admin?.role !== 'superadmin') {
+    return res.status(403).json({ success: false, message: 'Superadmin access required' });
+  }
+  next();
+};
+
+module.exports = { protect, requireSuperadmin };
