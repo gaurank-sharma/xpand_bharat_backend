@@ -11,6 +11,9 @@ app.set('trust proxy', 1);
 connectDB();
 
 const ALLOWED_ORIGINS = [
+  'https://xpandbharat.com',
+  'https://www.xpandbharat.com',
+  'https://admin.xpandbharat.com',
   'https://xpand-bharat.vercel.app',
   'http://localhost:5173',
   'http://localhost:5174',
