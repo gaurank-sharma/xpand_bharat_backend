@@ -96,7 +96,7 @@ const HEROES = [
     title: "Let's start the right",
     titleHighlight: 'business conversation.',
     subtitle: 'Whether you are exploring expansion, investment opportunities, or strategic partnerships — XPANDBHARAT is ready to move the conversation forward.',
-    backgroundImage: 'https://res.cloudinary.com/dx0hznaxr/image/upload/v1781376919/xpand_bharat/site/photo-1431576901776-e539bd916ba2.jpg',
+    backgroundImage: 'https://res.cloudinary.com/dx0hznaxr/image/upload/v1781404977/xpand_bharat/site/contact.png',
     ctaText: '',
     ctaLink: '',
   },

@@ -17,7 +17,7 @@ const HERO_KEY = {
   industries: '/img/photo-1480714378408-67cf0d13bc1b.jpg',
   about: '/about%20us.png',
   insights: '/img/photo-1532012197267-da84d127e765.jpg',
-  contact: '/img/photo-1431576901776-e539bd916ba2.jpg',
+  contact: '/contact.png',
 };
 
 // 1) content images: unsplash <id> -> cloudinary

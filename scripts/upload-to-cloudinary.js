@@ -21,7 +21,12 @@ fs.readdirSync(imgDir)
   .filter((f) => /\.(jpe?g|png|webp)$/i.test(f))
   .forEach((f) => files.push({ abs: path.join(imgDir, f), key: `/img/${f}`, id: f.replace(/\.[^.]+$/, '') }));
 // user-provided pngs in public root
-[['about us.png', '/about%20us.png', 'about-us'], ['investor.png', '/investor.png', 'investor']].forEach(([file, key, id]) => {
+[
+  ['about us.png', '/about%20us.png', 'about-us'],
+  ['investor.png', '/investor.png', 'investor'],
+  ['contact.png', '/contact.png', 'contact'],
+  ['image.png', '/image.png', 'office'],
+].forEach(([file, key, id]) => {
   const abs = path.join(FE_PUBLIC, file);
   if (fs.existsSync(abs)) files.push({ abs, key, id });
 });
