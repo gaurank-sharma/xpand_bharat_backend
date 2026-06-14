@@ -329,22 +329,29 @@ router.post('/', limiter, async (req, res) => {
 });
 
 // GET /api/contacts — admin only
+// Sources produced by the multi-step role/goal lead form (business queries)
+const LEAD_SOURCES = ['strategy-call', 'brochure-download'];
+
 router.get('/', protect, async (req, res) => {
-  const { status, search, page = 1, limit = 20 } = req.query;
+  const { status, search, view, page = 1, limit = 20 } = req.query;
   const filter = {};
   if (status && status !== 'all') filter.status = status;
+  if (view === 'business') filter.source = { $in: LEAD_SOURCES };
+  else if (view === 'contact') filter.source = { $nin: LEAD_SOURCES };
   if (search) {
     const r = new RegExp(search, 'i');
     filter.$or = [{ name: r }, { email: r }, { company: r }];
   }
   try {
-    const [data, total, stats] = await Promise.all([
+    const [data, total, stats, businessCount, contactCount] = await Promise.all([
       Contact.find(filter).sort({ createdAt: -1 }).skip((page - 1) * +limit).limit(+limit),
       Contact.countDocuments(filter),
       Contact.aggregate([{ $group: { _id: '$status', count: { $sum: 1 } } }]),
+      Contact.countDocuments({ source: { $in: LEAD_SOURCES } }),
+      Contact.countDocuments({ source: { $nin: LEAD_SOURCES } }),
     ]);
     const statsMap = stats.reduce((acc, s) => ({ ...acc, [s._id]: s.count }), {});
-    res.json({ success: true, data, total, stats: statsMap });
+    res.json({ success: true, data, total, stats: statsMap, viewCounts: { business: businessCount, contact: contactCount } });
   } catch (err) {
     res.status(500).json({ success: false, message: err.message });
   }

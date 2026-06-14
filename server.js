@@ -5,6 +5,9 @@ const connectDB = require('./config/db');
 
 const app = express();
 
+// Behind Vercel's proxy — trust the first hop so express-rate-limit can read the real client IP
+app.set('trust proxy', 1);
+
 connectDB();
 
 const ALLOWED_ORIGINS = [
