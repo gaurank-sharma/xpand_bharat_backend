@@ -9,11 +9,11 @@ const siteSettingsSchema = new mongoose.Schema({
   address:        { type: String, default: 'Gurugram, Haryana, India' },
   logoUrl:        { type: String, default: '' },
   logoPublicId:   { type: String, default: '' },
-  footerDescription: { type: String, default: "XPAND Bharat is India's leading franchise expansion and investment consulting company, backed by 25+ years of collective industry experience in franchise growth, investor alignment, and business expansion strategy." },
+  footerDescription: { type: String, default: "XPAND Bharat, a venture by XPANDVERSE PVT. LTD., is India's leading franchise expansion and investment consulting company — backed by 25+ years of collective industry experience in franchise growth, investor alignment, and business expansion strategy." },
   footerHeading:  { type: String, default: 'Ready to move' },
   footerTagline:  { type: String, default: "Connect with us. India's Leading Franchise Expansion." },
   footerSubline:  { type: String, default: '' },
-  copyrightText:  { type: String, default: 'XPANDBHARAT. All rights reserved.' },
+  copyrightText:  { type: String, default: 'XPANDVERSE PVT. LTD. All rights reserved.' },
   socialLinks: {
     linkedin:  { type: String, default: 'https://www.linkedin.com/company/xpandbharat/' },
     instagram: { type: String, default: 'https://www.instagram.com/xpandbharat' },
